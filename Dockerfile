@@ -56,5 +56,3 @@ RUN mkdir -p /mnt/extra-addons \
 # Expose Odoo services
 EXPOSE 8069 8071
 
-# Set the default config file
-ENV ODOO_RC /etc/odoo/odoo.conf
