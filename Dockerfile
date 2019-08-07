@@ -42,17 +42,3 @@ RUN pip3 install num2words \
         && pip3 install psycogreen==1.0 \
         && pip3 install python-redis-lock \
         && pip3 install redis
-
-# Copy entrypoint script and Odoo configuration file
-COPY ["docker/odoo.conf", "/etc/odoo/"]
-COPY ["docker/entrypoint.sh", "/"]
-RUN chown odoo /etc/odoo/odoo.conf
-
-# Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
-RUN mkdir -p /mnt/extra-addons \
-		&& chown -R odoo /var/lib/odoo \
-        && chown -R odoo /mnt/extra-addons
-
-# Expose Odoo services
-EXPOSE 8069 8071
-
