@@ -43,4 +43,5 @@ RUN pip3 install num2words \
         && pip3 install python-redis-lock \
         && pip3 install redis \
         && pip3 install pysftp \
-        && pip3 install woocommerce
+        && pip3 install woocommerce \
+        && pip3 install asyncio-nats-client
