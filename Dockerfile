@@ -42,6 +42,7 @@ RUN pip3 install num2words \
         && pip3 install psycogreen==1.0 \
         && pip3 install python-redis-lock \
         && pip3 install redis \
+        && pip3 install cffi==1.14.0 \
         && pip3 install pysftp \
         && pip3 install woocommerce 
         
